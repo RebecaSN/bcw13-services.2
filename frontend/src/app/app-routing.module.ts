@@ -11,6 +11,16 @@ const routes: Routes = [
         return m.FuncionarioModule
       })
     }
+  },
+  {
+    path:'servico',
+    loadChildren:()=>{
+      return import('../app/servico/servico/servico.module')
+      .then((m)=>{
+        return m.ServicoModule
+      })
+    }
+
   }
 ]
 
